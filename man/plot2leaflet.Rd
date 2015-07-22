@@ -4,7 +4,7 @@
 \alias{plot2leaflet}
 \title{Plot a 'location' object to a leaflet widget}
 \usage{
-plot2leaflet(theObject)
+plot2leaflet(theObject, popup = "NotDefined")
 }
 \arguments{
 \item{theObject}{A location.}

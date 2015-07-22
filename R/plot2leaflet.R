@@ -31,13 +31,13 @@
 #' map <- plot2leaflet(twoPlaces)
 #' map
 
-setGeneric(name = "plot2leaflet", def = function(theObject){
+setGeneric(name = "plot2leaflet", def = function(theObject, popup = "NotDefined"){
   standardGeneric("plot2leaflet")
 }
 )
 
 setMethod(f = "plot2leaflet", signature = "location",
-          definition = function(theObject){
+          definition = function(theObject, popup){
             fhs <- rgb(0, 102, 153, maxColorValue=255)
             library(magrittr)
             library(leaflet)
@@ -50,8 +50,7 @@ setMethod(f = "plot2leaflet", signature = "location",
               addCircleMarkers(
                 lng = theObject@lng,
                 lat = theObject@lat,
-                popup = paste('<h3>',theObject@name,'</h3><p>',theObject@street,
-                              ',',theObject@zip_code, theObject@community),
+                popup = popup,
                 group = theObject@name,
                 radius = 6,
                 color = fhs,
