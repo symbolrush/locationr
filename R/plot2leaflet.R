@@ -41,7 +41,7 @@ setMethod(f = "plot2leaflet", signature = "location",
             fhs <- rgb(0, 102, 153, maxColorValue=255)
             library(magrittr)
             library(leaflet)
-            m <- leaflet() %>%
+            m <- leaflet(width = "100%") %>%
               # Base groups
               addTiles(group = "OSM (default)") %>%
               addProviderTiles("Stamen.Toner", group = "Toner") %>%
