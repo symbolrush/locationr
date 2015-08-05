@@ -5,7 +5,8 @@ Version: 0.1
 Date: 2015-07-21
 Author: Adrian Schmid
 Maintainer: <adrian.schmid@fhsg.ch>
-Description: LocationR is an experimental package that helps you managing "location" objects. With methods for ploting to .png and leaflet
+Description:
+LocationR is an experimental package that defines an S4 class 'location' and helps you managing such objects. With methods for ploting to leaflet
 License: tbd
 LazyData: TRUE
 Imports: geocoder, ggmap, leaflet, magrittr
